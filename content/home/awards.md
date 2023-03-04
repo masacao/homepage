@@ -24,12 +24,12 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
 
-- certificate_url: ""
-  date_start: "2022-06-12"
-  description: ""
-  organization: Second Prize (Wanxiang Blockchain Labs)
-  organization_url: ""
-  title: Digital World 2077 Blockchain Hackathon
+# - certificate_url: ""
+#   date_start: "2022-06-12"
+#   description: ""
+#   organization: Second Prize (Wanxiang Blockchain Labs)
+#   organization_url: ""
+#   title: Digital World 2077 Blockchain Hackathon
 - certificate_url: ""
   date_end: "2024-10-30"
   date_start: "2015-06-01"

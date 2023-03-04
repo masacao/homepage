@@ -28,12 +28,12 @@ education:
   - course: Doctor of Philosophy in Computer Science
     institution: Zhejiang University (ZJU)
     year: 2019
-  - course: Bachelor of Science (honors) in Applied Chemistry
-    institution: University of Reading (UoR)
-    year: 2018
-  - course: Bachelor of Science in Applied Chemistry
-    institution: Nanjing University of Information Science & Technology (NUIST)
-    year: 2015
+  # - course: Bachelor of Science (honors) in Applied Chemistry
+  #   institution: University of Reading (UoR)
+  #   year: 2018
+  # - course: Bachelor of Science in Applied Chemistry
+  #   institution: Nanjing University of Information Science & Technology (NUIST)
+  #   year: 2015
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -51,7 +51,7 @@ social:
   link: https://scholar.google.com/citations?user=lBrfv0EAAAAJ&hl=zh-CN
 - icon: github
   icon_pack: fab
-  link: https://github.com/zjucz
+  link: https://github.com/masacao
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/政-曹-2367a9147/?locale=en_US
@@ -69,7 +69,9 @@ email: "z.cao AT zju.edu.cn"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Zheng Cao (曹政) is a Ph.D. candidate, majoring in computer science, Zhejiang University, under the supervision from Prof. Jian Wu. He is currently working as a research intern in Tencent Quantum Lab, cooperating with Prof. Tingjun Hou and Dr. Chang-Yu Hsieh. He is member of ZJU RealDoctor AI Research Centre and ZJU Innovative Drug Discovery Insitute. His research interests include AI for medical image analysis and AI for drug discovery. He serves as a CTO for a web3 startup as well.
+Zheng Cao (曹政) is a Ph.D. candidate, majoring in computer science, Zhejiang University, under the supervision from Prof. Jian Wu. He serves as the CTO in TraFinity Limited.
+
+<!-- He is currently working as a research intern in Tencent Quantum Lab, cooperating with Prof. Tingjun Hou and Dr. Chang-Yu Hsieh. He is member of ZJU RealDoctor AI Research Centre and ZJU Innovative Drug Discovery Insitute. His research interests include AI for medical image analysis and AI for drug discovery. He serves as a CTO for a web3 startup as well. -->
 <!-- {{< icon name="eye" pack="fas" >}}Here is my full [publications list](./publication/). -->
 
 <!-- {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}. -->
