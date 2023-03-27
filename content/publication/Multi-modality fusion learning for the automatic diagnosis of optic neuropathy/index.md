@@ -31,7 +31,7 @@ publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: Pattern Recogonition Lettters
-publication_short: Pattern Recogonition Lettters
+publication_short: PRL
 
 abstract: Optic neuropathy is kind of common eye diseases, which usually causes irreversible vision loss. Early diagnosis is key to saving patients’ vision. Due to the similar early clinical manifestations of common optic neuropathy, it may cause misdiagnosis and delays in treatment. Worse, most diagnoses rely on experienced doctors. In this paper, we proposed a novel deep learning architecture GroupFusionNet (GFN) to diagnose ﬁve normal optic neuropathy diseases, including Anterior Ischemic Optic Neuropathy (AION), papilledema, papillitis, Optic Disc Vasculitis (ODV), and optic atrophy (OA). Speciﬁcally, we combined multi-modalities in clinic examination such as fundus image, visual ﬁeld tests and age of each patient. GFN utilized two ResNet pathways to extract and fuse both features of fundus image and visual ﬁeld tests, and the information of structured data was embedded in the end. Experimental results demonstrate that multi-modality feature aggregation is effective for optic neuropathy diseases diagnosis, and GFN achieved a ﬁve-classes classiﬁcation accuracy of 87.82% on the test dataset.
 

@@ -29,7 +29,7 @@ publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
 publication: the 43rd Annual International Conference of the IEEE Engineering in Medicine and Biology Society
-publication_short: EMBC2021
+publication_short: EMBC
 
 abstract: The wide spread of coronavirus pneumonia (COVID-19) has been a severe threat to global health since 2019. Apart from the nucleic acid detection, medical imaging examination is a vital diagnostic modality to conﬁrm and treat the disease. Thus, implementing the automatic diagnosis of the COVID-19 bears particular signiﬁcance. However, the limitations of data quality and size strongly hinder the classiﬁcation and segmentation performance and it also result in high misdiagnosis rate. To this end, we propose a novel full scale attention mechanism (FUSA) to capture more contextual dependencies of features, which enables the model easier to classify positive cases and improve the sensitivity. Speciﬁcally, FUSA parallelly extracts the information of channel domain and spatial domain, and fuses them together. The experimental study shows FUSA can signiﬁcantly improve the COVID-19 automated diagnosis performance and eliminate false negative cases compared with other state-of-the-art ones.
 

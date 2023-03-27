@@ -11,7 +11,7 @@ weight: 45
 
 # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
 title: 'Awards'
-subtitle: 'Part of Competition Awards, more than 50 honors in the past few years.'
+subtitle: 'I gain more than 50 honors in the past few years, part of them are listed as follows:'
 
 # Date format
 #   Refer to https://wowchemy.com/docs/customization/#date-format

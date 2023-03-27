@@ -32,7 +32,7 @@ publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: International Journal of Paediatric Dentistry
-publication_short: International Journal of Paediatric Dentistry
+publication_short: IJPD
 
 abstract: Objectives.The purpose of this research was to present an artificial intelligence (AI) model which can automatically segment and detect ectopic eruption of the permanent first molars (EMMs) in early mixed dentition on panoramic radiographs using no-new-Net (nnU-Net) model.Materials and Methods. 438 EMMs obtained from 285 panoramic radiographs were included in this study. AI model based on nnU-Net was trained to segment and detect the EMMs. The performance of the model was evaluated by the intersection over union (IoU), precision, F1-score, accuracy and FROC. Furthermore, the detecting performance of nnU-Net was compared with three dentists with different years of experience using the McNemar chi-square test. The reliability of different dentists was evaluated by intraclass correlation coefficients (ICC).Results.The nnU-Net yielded an IoU of 0.834, a precision of 0.845, an F1-score of 0.902 and an accuracy of 0.990. Moreover, the dentists yielded a mean IoU of 0.530, a mean precision of 0.539, a mean F1-score of 0.699 and a mean accuracy of 0.811. The ICC of different dentists was 0.776. The statistical analysis of the McNemar chi-square test showed that the nnU-Net results were statistically significant and superior to that of dentists (P <0.05). Conclusions.This study validated an AI model based on nnU-Net for automatically segmenting and detecting EMMs more consistently and accurately on panoramic radiography.
 # Summary. An optional shortened abstract.

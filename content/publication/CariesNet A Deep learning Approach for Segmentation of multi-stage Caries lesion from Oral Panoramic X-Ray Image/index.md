@@ -30,8 +30,8 @@ publishDate: "2022-01-03T20:00:00Z"
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: NCAA
-publication_short: Neural Computing & Applications
+publication: Neural Computing & Applications
+publication_short: NCA
 
 abstract: Dental caries has been a common health issue throughout the world, which can even lead to dental pulp and root apical inﬂammation eventually. Timely and eﬀective treatment of dental caries is vital for patients to reduce pain. Traditional caries disease diagnosis methods like naked-eye detection and panoramic radiograph examinations rely on experienced doctors, which may cause misdiagnosis and high time-consuming. To this end, we propose a novel deep learning architecture called CariesNet to delineate diﬀerent caries degrees from panoramic radiographs. We ﬁrstly collect a high-quality panoramic radiograph dataset with 3127 well-delineated caries lesions, including shallow caries, moderate caries, and deep caries. Then we construct CariesNet as a U-shape network with the additional full-scale axial attention module to segment these three caries types from the oral panoramic images. Moreover, we test the segmentation performance between CariesNet and other baseline methods. Experiments show that our method can achieve a mean 93.64% dice coeﬃcient and 93.61% accuracy in the segmentation of three diﬀerent levels of caries.
 

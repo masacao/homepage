@@ -32,7 +32,7 @@ publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: Neurocomputing
-publication_short: Neurocomputing
+publication_short: NEUROCOM
 
 abstract: Computed Tomography (CT) has been widely used in the planning of radiation therapy, which is one of the most effective clinical lung cancer treatment options. Accurate segmentation of organs at risk (OARs) in thoracic CT images is a key step for radiotherapy planning to prevent healthy organs from getting over irradiation. However, known automatic image segmentation methods can hardly yield desired OAR delineation results, while manual delineation tends to take long time and tedious effort. In this paper, we propose a novel deep learning network, called cascaded SE-ResUnet, for automatic segmentation of thoracic organs including left lung, right lung, heart, esophagus, trachea, and spinal cord. Speciﬁcally, we ﬁrst use a coarse segmentation network to identify the regions of interest (ROIs), and then a ﬁne segmentation network is applied to achieve reﬁned segmentation results, organ by organ. Finally, different conﬁgured models are ensembled to obtain the ﬁnal segmentation results. In the StructSeg 2019 Challenge, we showed the capability of our new framework and won the 1st place at the test phase. Our code is available open-source at https://github.com/zjuybh/StructSeg2019.
 

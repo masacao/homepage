@@ -30,7 +30,7 @@ publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: IEEE Transactions on Multimedia
-publication_short: IEEE TMM
+publication_short: TMM
 
 abstract: The rib fracture is a common type of thoracic skeletal trauma, and its inspections using computed tomography (CT) scans are critical for clinical evaluation and treatment planning. However, it is often challenging for radiologists to quickly and accurately detect rib fractures due to tiny objects and blurriness in large 3D CT images.  Previous diagnoses for automatic rib fracture mostly relied on deep learning (DL)-based object detection, which highly depends on label quality and quantity. Moreover, general object detection methods did not take into consideration the typically elongated and oblique shapes of ribs in 3D volumes. To address these issues, we propose a shape-aware method based on DL called SA-FracNet for rib fracture detection and segmentation. First, we design a pixel-level pretext task founded on contrastive learning on massive unlabeled CT images. Second, we train the fine-tuned rib fracture detection model based on the pre-trained weights. Third, we develop a fracture shape-aware multi-task segmentation network to delineate the fracture based on the detection result. Experiments demonstrate that our proposed SA-FracNet achieves state-of-the-art rib fracture detection and segmentation performance on the public RibFrac dataset, with a detection sensitivity of 0.926 and segmentation Dice of 0.754. Test on a private dataset also validates the robustness and generalization of our SA-FracNet.
 
