@@ -29,27 +29,27 @@ item:
   description: ""
   organization: Second Prize (Wanxiang Blockchain Labs)
   organization_url: ""
-  title: Digital World 2077 Blockchain Hackathon
+  title: Web3 (Blockchain) Hackathon
 - certificate_url: ""
   date_end: "2024-10-30"
   date_start: "2015-06-01"
   description: ""
-  organization: Academic Scholarship (2019-2024), Outstanding Graduates (2019-2021), Extrodinary Bachlors (2019), RED Award (2019), Five-Four Youth Pacesetters (2018), Merit Students (2017)
+  organization: Academic Scholarship (2019-2024), The First Prize Scholarship (2022), Merit Graduate Student (2022), Outstanding Graduates (2019-2021), Extrodinary Bachlors (2019), RED Award (2019), Five-Four Youth Pacesetters (2018), Merit Undergraduate Students (2017)
   organization_url: ""
   title: University Awards
 - certificate_url: "https://www.comap-math.com/mcm/2018Certs/73473.pdf"
   date_end: "2018-03-01"
   date_start: "2017-03-01"
   description: ""
-  organization: Meritorious Winner (2018 COMAP's MCM), First Prize (2017 National MCM)
+  organization: Meritorious Winner (2018 COMAP's MCM), First Prize (2017 National MCM), Third Prize (2019/2020 Graduate-level)
   organization_url: ""
   title: Mathematical Contest in Modeling (MCM)
   url: "https://www.comap.com/undergraduate/contests/mcm/"
 - certificate_url: ""
   date_end: "2022-10-30"
   date_start: "2017-10-01"
-  organization: National Silver Medal (2017), Jiangsu First Prize (2017), Zhejiang Second Prize (2022), NUIST First Prize (2017), ZJU First Prize (2022)
-  title: International College Students' "Internet+" Innovation and Entrepreneurship Competition
+  organization: National Silver Medal (2017/2022), Provincial First Prize (2017/2022), Provincial Second Prize (2018/2022), University First Prize (2017/2022)
+  title: Innovation and Entrepreneurship Competition ("Internet+ Cup" or "Challenge Cup")
   url: "https://cy.ncss.cn/en/"
 - certificate_url: ""
   date_end: "2018-09-30"
