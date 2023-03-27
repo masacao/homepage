@@ -24,12 +24,12 @@ date_format: Jan 2006
 experience:
 
   - title: CTO / Co-founder
-    company: Let's MeMe
+    company: TraFinity Limited
     company_url: 'https://letusmeme.com'
     location: Shenzhen
     date_start: '2022-09-01'
     date_end: ''
-    description: Data Analysis and Product Devlopment.
+    description: Product Devlopment.
 
 
   - title: Theory Group Intern
@@ -40,21 +40,21 @@ experience:
     date_end: '2022-06-30'
     description: Research on AI methods for drug discovery, i.e. Retrosynthesis.
 
-  # - title: Research Intern
-  #   company: DAMO Academy, Alibaba Co., Ltd.
-  #   company_url: 'https://damo.alibaba.com'
-  #   location: Hangzhou
-  #   date_start: '2021-07-08'
-  #   date_end: '2021-07-21'
-  #   description: Research on AI methods for drug discovery, i.e. Molecular Docking.
+  - title: Research Intern
+    company: DAMO Academy, Alibaba Co., Ltd.
+    company_url: 'https://damo.alibaba.com'
+    location: Hangzhou
+    date_start: '2021-07-08'
+    date_end: '2021-07-21'
+    description: Research on AI methods for drug discovery, i.e. Molecular Docking.
   
-  # - title: Data Mining Intern
-  #   company: Xuanlife Information Technology Co., Ltd.
-  #   company_url: 'http://www.xuanlife.com.cn'
-  #   location: Nanjing
-  #   date_start: '2020-10-01'
-  #   date_end: ''
-  #   description: Research on large-scale machine learning algorithms and parallel implementation.
+  - title: Data Mining Intern
+    company: Xuanlife Information Technology Co., Ltd.
+    company_url: 'http://www.xuanlife.com.cn'
+    location: Nanjing
+    date_start: '2020-10-01'
+    date_end: ''
+    description: Research on large-scale machine learning algorithms and parallel implementation.
         
   - title: Technical Support Intern
     company: Oracle Corporation, Nanjing Branch
