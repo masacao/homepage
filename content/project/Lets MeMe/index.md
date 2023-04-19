@@ -15,7 +15,7 @@ external_link: "https://t.xyz"
 links:
 - icon: hubspot
   icon_pack: fab
-  name: Follow
+  name: Homepage
   url: https://t.xyz
 - icon: twitter
   icon_pack: fab

@@ -8,10 +8,14 @@ date: "2022-07-01T00:00:00Z"
 links:
 - icon: hubspot
   icon_pack: fab
-  name: Follow
+  name: Paper
   url: https://arxiv.org/abs/2208.05168
-
-url_code: "https://github.com/turtlecasedao/OpenERC721G"
+- icon: gg
+  icon_pack: fab
+  name: Code
+  url: https://github.com/turtlecasedao/OpenERC721G
+  
+url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
