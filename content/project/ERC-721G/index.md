@@ -4,7 +4,13 @@ summary: A Ethernum NFT anti-theft Standard
 tags:
 - Web3
 date: "2022-07-01T00:00:00Z"
-external_link: "https://arxiv.org/abs/2208.05168"
+
+links:
+- icon: hubspot
+  icon_pack: fab
+  name: Follow
+  url: https://arxiv.org/abs/2208.05168
+
 url_code: "https://github.com/turtlecasedao/OpenERC721G"
 url_pdf: ""
 url_slides: ""

@@ -13,6 +13,10 @@ external_link: "https://t.xyz"
 #   focal_point: Smart
 
 links:
+- icon: hubspot
+  icon_pack: fab
+  name: Follow
+  url: https://t.xyz
 - icon: twitter
   icon_pack: fab
   name: Follow

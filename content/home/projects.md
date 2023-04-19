@@ -27,10 +27,12 @@ content:
   filter_button:
   - name: All
     tag: '*'
-  - name: Lets MeMe
-    tag: Metaverse & Web3
+  - name: Web3
+    tag: Web3
   - name: Deep Learning
     tag: Deep Learning
+   - name: Medical Imaging
+    tag: Medical Imaging
   - name: Drug Discovery
     tag: Drug Discovery
 
