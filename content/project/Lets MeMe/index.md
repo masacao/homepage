@@ -1,12 +1,12 @@
 ---
-title: TraFinity Labs
-summary: Lets MeMe
+title: Lets MeMe
+summary: A Web3 TrafficFi Protocol
 tags:
 - Web3
 date: "2022-10-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: ""
+external_link: "https://t.xyz"
 
 # image:
 #   caption: Photo by rawpixel on Unsplash
@@ -16,8 +16,8 @@ links:
 - icon: twitter
   icon_pack: fab
   name: Follow
-  url: https://twitter.com/turtlecasegang
-url_code: "https://github.com/turtlecasedao/OpenERC721G"
+  url: https://twitter.com/letusmeme3
+url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
@@ -30,11 +30,11 @@ url_video: ""
 # slides: example
 ---
 
-# 🏠 What is Trafinity
+# 🏠 Introduction
 
 <figure><img src="https://gitlab.com/letsmeme/whitepaper/-/raw/main/.gitbook/assets/%E6%88%AA%E5%B1%8F2022-11-17%2021.47.17.png" alt=""><figcaption><p>https://t.xyz</p></figcaption></figure>
 
-TraFinity is a web3 traffic and community centric company that created Let's meme -- a community management and traffic-fi protocol tool designed to help thousands of future businesses, communities and brands better market their blockchain-based technology and their web3 vision.
+We are a web3 traffic and community centric company that created Let's meme -- a community management and traffic-fi protocol tool designed to help thousands of future businesses, communities and brands better market their blockchain-based technology and their web3 vision.
 
 ## What is LetsMeMe?
 
