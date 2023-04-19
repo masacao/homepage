@@ -1,21 +1,10 @@
 ---
 title: ERC-721G
 summary: A Ethernum NFT anti-theft Standard
+tags:
 - Web3
 date: "2022-07-01T00:00:00Z"
-
-# Optional external URL for project (replaces project detail page).
 external_link: "https://arxiv.org/abs/2208.05168"
-
-# image:
-#   caption: Photo by rawpixel on Unsplash
-#   focal_point: Smart
-
-# links:
-# - icon: twitter
-#   icon_pack: fab
-#   name: Follow
-#   url: https://twitter.com/georgecushen
 url_code: "https://github.com/turtlecasedao/OpenERC721G"
 url_pdf: ""
 url_slides: ""
@@ -28,7 +17,6 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 # slides: example
 ---
-
 # Protect Your NFTs with TokenPatronus
 
 Are you worried about the security of your non-fungible tokens (NFTs)? Look no further than TokenPatronus, the decentralized NFT anti-theft mechanism that provides strong property protection for NFT holders.
