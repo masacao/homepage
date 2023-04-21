@@ -78,7 +78,7 @@ Zheng Cao (曹政) is a Ph.D. candidate, majoring in computer science, Zhejiang 
 
 {{< icon name="eye" pack="fas" >}}Here is my full [publications list](./publication/).
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/2022cv_en" "newtab" >}}resume{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/2022cv_en.pdf" "newtab" >}}resume{{< /staticref >}}.
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q0V5Y3KXJ"></script>
