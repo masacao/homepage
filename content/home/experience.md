@@ -52,7 +52,7 @@ experience:
     company_url: 'http://www.xuanlife.com.cn'
     location: Nanjing
     date_start: '2020-10-01'
-    date_end: '2021-9-30'
+    date_end: '2021-09-30'
     description: Research on large-scale machine learning algorithms and parallel implementation.
         
   - title: Technical Support Intern

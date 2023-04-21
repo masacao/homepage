@@ -5,9 +5,9 @@
     <link>www.caoz.top/</link>
       <atom:link href="www.caoz.top/index.xml" rel="self" type="application/rss+xml" />
     <description>Z.Cao</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>浙ICP备2021027422号-1 Copyright@2022 Zheng Cao</copyright><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>浙ICP备2021027422号-1 Copyright@2023 Zheng Cao</copyright><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>/www.caoz.top/media/icon_hu11361c0288a87fbf93fc0f06f84edd26_64780_512x512_fill_lanczos_center_2.png</url>
+      <url>/www.caoz.top/media/icon_hu11361c0288a87fbf93fc0f06f84edd26_64780_512x512_fill_lanczos_center_3.png</url>
       <title>Z.Cao</title>
       <link>www.caoz.top/</link>
     </image>
@@ -33,11 +33,187 @@
     </item>
     
     <item>
-      <title>Web3</title>
-      <link>www.caoz.top/project/letus-meme/</link>
+      <title>A Simple PyTorch Implementation Benchmark</title>
+      <link>www.caoz.top/post/a-simple-pytorch-implementation-benchmark/</link>
+      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>www.caoz.top/post/a-simple-pytorch-implementation-benchmark/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Welcome to my latest blog post, where I will be introducing a basic benchmark for PyTorch, the popular deep learning library. As a machine learning enthusiast, I understand the importance of measuring the performance of different hardware setups for deep learning tasks. By comparing the capabilities of various CPUs and GPUs, we can better understand the trade-offs and make more informed decisions when building our machine learning infrastructure.&lt;/p&gt;
+&lt;p&gt;In this post, I will present the results of a basic PyTorch benchmark that I ran on various CPUs and GPUs. I will discuss the performance of these hardware components in terms of iterations per second (it/s), and provide some insights into the differences observed.&lt;/p&gt;
+&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from tqdm import tqdm
+import torch
+import os,sys
+
+# os.environ[&#39;CUDA_VISIBLE_DEVICES&#39;]=&#39;4&#39;
+
+# device=torch.device(&amp;quot;cuda:4&amp;quot; if torch.cuda.is_available() else &amp;quot;cpu&amp;quot;)
+# print(device)
+
+@torch.jit.script
+def foo():
+    x = torch.ones((1024 * 12, 1024 * 12), dtype=torch.float32)
+    y = torch.ones((1024 * 12, 1024 * 12), dtype=torch.float32)
+    x = x.cuda()
+    y = y.cuda()
+    z = x + y
+    return z
+
+
+if __name__ == &#39;__main__&#39;:
+    z0 = None
+    for _ in tqdm(range(10000000000)):
+        zz = foo()
+        if z0 is None:
+            z0 = zz
+        else:
+            z0 += zz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;The following are the results obtained from the benchmarking experiment:&lt;/p&gt;
+&lt;p&gt;(Updated 20/Apr)&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Hardware Component&lt;/th&gt;
+&lt;th&gt;Performance (it/s)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia 3090 GPU&lt;/td&gt;
+&lt;td&gt;670&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 3900X CPU&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Apple M1 CPU&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Server CPU&lt;/td&gt;
+&lt;td&gt;74&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Server GPU GTX1080Ti&lt;/td&gt;
+&lt;td&gt;300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Server GPU (Overheat)&lt;/td&gt;
+&lt;td&gt;55&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tencent Cloud&lt;/td&gt;
+&lt;td&gt;75&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;IIAIM Node GPU01 RTX3080&lt;/td&gt;
+&lt;td&gt;402&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tencent VENUS V100 GPU&lt;/td&gt;
+&lt;td&gt;677&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 5 5600G CPU&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia RTX3060 GPU&lt;/td&gt;
+&lt;td&gt;320&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;analysis&#34;&gt;Analysis&lt;/h2&gt;
+&lt;p&gt;From the results, we can observe that GPUs generally outperform CPUs in terms of performance when running PyTorch tasks. For instance, the Nvidia 3090 GPU achieved 670 it/s, which is 6.8% of its performance when running on a CPU. This is a remarkable improvement, and demonstrates the power of GPUs for deep learning tasks.&lt;/p&gt;
+&lt;p&gt;When comparing different CPUs, we can see that the Apple M1 and Server CPU show better performance than the AMD Ryzen 9 3900X and Ryzen 5 5600G. However, the difference in performance between these CPUs is not as significant as the difference between GPUs.&lt;/p&gt;
+&lt;p&gt;On the GPU side, the Nvidia RTX3090 and Tencent VENUS V100 show the highest performance, followed by the IIAIM Node GPU01 RTX3080 and Nvidia RTX3060. Interestingly, the Server GPU GTX1080Ti and the overheat variant show comparatively lower performance, suggesting that thermal management plays a crucial role in GPU performance.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In conclusion, this basic PyTorch benchmark highlights the advantages of using GPUs for deep learning tasks over CPUs. The performance gap between GPUs and CPUs is significant, and it is essential to choose the right hardware for your specific machine learning projects. It is also important to consider factors such as thermal management when selecting a GPU to ensure optimal performance.&lt;/p&gt;
+&lt;p&gt;As a final note, we hope to see further support for GPUs and neural engines in the near future, which could potentially unlock even greater performance gains for deep learning tasks.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Robust Shape-Aware Rib Fracture Detection and Segmentation Framework with Contrastive Learning</title>
+      <link>www.caoz.top/publication/a-robust-shape-aware-rib-fracture-detection-and-segmentation-framework-with-contrastive-learning/</link>
+      <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>www.caoz.top/publication/a-robust-shape-aware-rib-fracture-detection-and-segmentation-framework-with-contrastive-learning/</guid>
+      <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lets MeMe</title>
+      <link>www.caoz.top/project/lets-meme/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>www.caoz.top/project/letus-meme/</guid>
-      <description>&lt;p&gt;Our mission is to re-direct the financial value of traffic, bringing more financial incentive around personal influence and allowing traffic to be circulated and utilized fully and efficiently.&lt;/p&gt;
+      <guid>www.caoz.top/project/lets-meme/</guid>
+      <description>&lt;h1 id=&#34;-introduction&#34;&gt;🏠 Introduction&lt;/h1&gt;
+&lt;figure&gt;&lt;img src=&#34;https://gitlab.com/letsmeme/whitepaper/-/raw/main/.gitbook/assets/%E6%88%AA%E5%B1%8F2022-11-17%2021.47.17.png&#34; alt=&#34;&#34;&gt;&lt;figcaption&gt;&lt;p&gt;https://t.xyz&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;We are a web3 traffic and community centric company that created Let&amp;rsquo;s meme &amp;ndash; a community management and traffic-fi protocol tool designed to help thousands of future businesses, communities and brands better market their blockchain-based technology and their web3 vision.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-letsmeme&#34;&gt;What is LetsMeMe?&lt;/h2&gt;
+&lt;p&gt;LetsMeMe is the world&amp;rsquo;s first trafficFi based community management platform. It is a social layer-2 network built upon traditional social media, i.e Twitter. LetsMeMe integrates web3 functionality with web2 social media platforms like Twitter and Youtube, to benefit and enhance crypto-native communities. Its existence will enable the creation of the largest web3 traffic network driven entirely by communities.&lt;/p&gt;
+&lt;h2 id=&#34;vision&#34;&gt;Vision&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Empower businesses of all sizes to reach beyond their target audience and achieve their marketing goals.&lt;/li&gt;
+&lt;li&gt;Create the farthest-reaching web3 traffic network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mission&#34;&gt;Mission&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow all communities to manage and engage their members more easily.&lt;/li&gt;
+&lt;li&gt;Destabilize the web2 traffic monopoly, allowing all organizations to advance their vision.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;values&#34;&gt;Values&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use advancing technology to drive marketing&lt;/li&gt;
+&lt;li&gt;Holders themselves are a community’s builders&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ERC-721G</title>
+      <link>www.caoz.top/project/erc-721g/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>www.caoz.top/project/erc-721g/</guid>
+      <description>&lt;h1 id=&#34;protect-your-nfts-with-tokenpatronus&#34;&gt;Protect Your NFTs with TokenPatronus&lt;/h1&gt;
+&lt;p&gt;Are you worried about the security of your non-fungible tokens (NFTs)? Look no further than TokenPatronus, the decentralized NFT anti-theft mechanism that provides strong property protection for NFT holders.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-tokenpatronus&#34;&gt;What is TokenPatronus?&lt;/h2&gt;
+&lt;p&gt;TokenPatronus is a decentralized anti-theft mechanism designed specifically for NFTs. It contains pre-event protection, in-event interruption, and post-event replevin enhancements for the complete NFT transaction process. Four modules make up the TokenPatronus anti-theft mechanism:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Decentralized access control (DAC)&lt;/li&gt;
+&lt;li&gt;Decentralized risk management (DRM)&lt;/li&gt;
+&lt;li&gt;Decentralized arbitration system (DAS)&lt;/li&gt;
+&lt;li&gt;ERC-721G standard smart contract&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These modules work together to ensure the trust and robustness of the TokenPatronus mechanism.&lt;/p&gt;
+&lt;h2 id=&#34;how-does-tokenpatronus-work&#34;&gt;How does TokenPatronus work?&lt;/h2&gt;
+&lt;p&gt;TokenPatronus divides the transaction of an NFT into three stages: pre-event protection, in-event interruption, and post-event process. Each stage has a corresponding role for TokenPatronus to play.&lt;/p&gt;
+&lt;p&gt;During pre-event protection, TokenPatronus uses its decentralized identification module to verify the identity of both parties involved in the transaction. This helps prevent fraudulent transactions from occurring in the first place.&lt;/p&gt;
+&lt;p&gt;In the event that a fraudulent transaction does occur, TokenPatronus can interrupt it using its decentralized risk management engine. This engine combines information from various sources, including deep learning models trained on transaction history stored in decentralized storage. The engine assesses the risk status of each transaction and can halt any suspicious activity.&lt;/p&gt;
+&lt;p&gt;Finally, if an NFT is stolen or lost after a successful transaction has taken place, TokenPatronus provides post-event replevin enhancements to help recover it. This includes the use of a decentralized arbitration system to resolve disputes and the ERC-721G smart contract standard to ensure that ownership of the NFT is properly recorded.&lt;/p&gt;
+&lt;h2 id=&#34;why-choose-tokenpatronus&#34;&gt;Why choose TokenPatronus?&lt;/h2&gt;
+&lt;p&gt;TokenPatronus provides several benefits over other anti-theft mechanisms on the market. First and foremost, it is decentralized, meaning that there is no central authority controlling the system. This makes it more resistant to attacks and less vulnerable to corruption.&lt;/p&gt;
+&lt;p&gt;Additionally, TokenPatronus is designed specifically for NFTs, meaning that it provides tailored protection for this unique asset class. It supports the general ERC-721 standard and will support more blockchains in the future, making it a versatile solution for NFT holders.&lt;/p&gt;
+&lt;p&gt;Finally, TokenPatronus is easy to use. It includes a front-end web interface that allows users to easily manage their NFTs and perform operations such as adding and unlocking them.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;re an NFT holder looking for strong property protection, look no further than TokenPatronus. Its decentralized anti-theft mechanism provides pre-event protection, in-event interruption, and post-event replevin enhancements to ensure the security of your NFTs. With its tailored support for ERC-721 standard NFTs and easy-to-use web interface, TokenPatronus is the perfect solution for anyone looking to protect their valuable digital assets.&lt;/p&gt;
 </description>
     </item>
     
@@ -166,6 +342,15 @@ Supplementary notes can be added here, including [code, math, and images](https:
     </item>
     
     <item>
+      <title>Medical Image Analysis</title>
+      <link>www.caoz.top/project/medical-image-analysis/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>www.caoz.top/project/medical-image-analysis/</guid>
+      <description>&lt;p&gt;MedIA is a wide subject, including different image modalities, i.e. CT/MRI/X-ray.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Training 2D nnUNet with personal dataset</title>
       <link>www.caoz.top/post/training-2d-nnunet-with-personal-dataset/</link>
       <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
@@ -267,15 +452,6 @@ CUDA_VISIBLE_DEVICES=6 nnUNet_train 2d nnUNetTrainerV2 Task002_Heart 4  --npz
     </item>
     
     <item>
-      <title>Medical Image Analysis</title>
-      <link>www.caoz.top/project/medical-image-analysis/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>www.caoz.top/project/medical-image-analysis/</guid>
-      <description>&lt;p&gt;MedIA is a wide subject, including different image modalities, i.e. CT/MRI/X-ray.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Multi-modality fusion learning for the automatic diagnosis of optic neuropathy</title>
       <link>www.caoz.top/publication/multi-modality-fusion-learning-for-the-automatic-diagnosis-of-optic-neuropathy/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
@@ -349,7 +525,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-695283741&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-937248156&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -359,7 +535,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-695283741&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-937248156&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -375,14 +551,14 @@ data.head()
 {\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$$&lt;/p&gt;
+&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}&lt;em&gt;{n}) - \nabla F(\mathbf{x}&lt;/em&gt;{n-1}) \right |^2}$$&lt;/p&gt;
 &lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;$\nabla F(\mathbf{x}_{n})$&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
 &lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the &lt;code&gt;\\\\&lt;/code&gt; math linebreak:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;$$f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} &amp;amp; \text{if }k=1, \\\\
 1-p_{0}^{*} &amp;amp; \text{if }k=0.\end{cases}$$
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;$$f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} &amp;amp; \text{if }k=1, \\&lt;br&gt;
+&lt;p&gt;$$f(k;p_{0}^{&lt;em&gt;}) = \begin{cases}p_{0}^{&lt;/em&gt;} &amp;amp; \text{if }k=1, \\
 1-p_{0}^{*} &amp;amp; \text{if }k=0.\end{cases}$$&lt;/p&gt;
 &lt;h3 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h3&gt;
 &lt;p&gt;Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the &lt;code&gt;diagram&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file or by adding &lt;code&gt;diagram: true&lt;/code&gt; to your page front matter.&lt;/p&gt;
@@ -625,7 +801,7 @@ date: 2019-09-01
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir=.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
-&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -680,15 +856,15 @@ $$&lt;/p&gt;
 {{% fragment %}} Three {{% /fragment %}}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
-One
+&lt;span class=&#34;fragment &#34; &gt;
+   One 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-&lt;strong&gt;Two&lt;/strong&gt;
+   **Two** 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-Three
-&lt;/span&gt;&lt;/p&gt;
+   Three 
+&lt;/span&gt;
 &lt;hr&gt;
 &lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
 &lt;ul&gt;
@@ -755,6 +931,24 @@ Three
 &lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/discussions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>www.caoz.top/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>www.caoz.top/privacy/</guid>
+      <description>&lt;p&gt;Add your privacy policy here and set &lt;code&gt;draft: false&lt;/code&gt; to publish it. Otherwise, delete this file if you don&amp;rsquo;t need it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>www.caoz.top/terms/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>www.caoz.top/terms/</guid>
+      <description>&lt;p&gt;Add your terms here and set &lt;code&gt;draft: false&lt;/code&gt; to publish it. Otherwise, delete this file if you don&amp;rsquo;t need it.&lt;/p&gt;
 </description>
     </item>
     

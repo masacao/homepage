@@ -11,31 +11,55 @@
     <loc>www.caoz.top/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
+    <loc>www.caoz.top/post/a-simple-pytorch-implementation-benchmark/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/categories/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/tag/deep-learning/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/category/deep-learning/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/post/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/tags/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/tag/web3/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/category/web3/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/publication-type/2/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/publication/a-robust-shape-aware-rib-fracture-detection-and-segmentation-framework-with-contrastive-learning/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/tag/medical-imaging/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/publication_types/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/publication/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/project/lets-meme/</loc>
+    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>www.caoz.top/project/</loc>
     <lastmod>2022-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>www.caoz.top/tags/</loc>
-    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>www.caoz.top/tag/web3/</loc>
-    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>www.caoz.top/project/letus-meme/</loc>
-    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>www.caoz.top/publication-type/2/</loc>
-    <lastmod>2022-03-21T00:00:00+00:00</lastmod>
+    <loc>www.caoz.top/project/erc-721g/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>www.caoz.top/publication/automatic-segmentation-and-detection-of-ectopic-eruption-of-the-first-permanent-molars-on-panoramic-radiographs-based-on-nnu-net/</loc>
-    <lastmod>2022-03-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>www.caoz.top/tag/medical-imaging/</loc>
-    <lastmod>2022-03-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>www.caoz.top/publication_types/</loc>
-    <lastmod>2022-03-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>www.caoz.top/publication/</loc>
     <lastmod>2022-03-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>www.caoz.top/publication/a-deep-learning-approach-for-detecting-colorectal-cancer-via-raman-spectra/</loc>
@@ -53,29 +77,20 @@
     <loc>www.caoz.top/publication/full-scale-attention-for-automated-covid-19-diagnosis-from-ct-images/</loc>
     <lastmod>2021-07-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>www.caoz.top/tag/deep-learning/</loc>
+    <loc>www.caoz.top/tag/drug-discovery/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>www.caoz.top/project/drug-discovery/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>www.caoz.top/categories/</loc>
-    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>www.caoz.top/category/deep-learning/</loc>
-    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+    <loc>www.caoz.top/project/medical-image-analysis/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>www.caoz.top/tag/image-segmentation/</loc>
     <lastmod>2021-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>www.caoz.top/post/</loc>
-    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>www.caoz.top/post/training-2d-nnunet-with-personal-dataset/</loc>
     <lastmod>2021-04-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>www.caoz.top/project/medical-image-analysis/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>www.caoz.top/publication/multi-modality-fusion-learning-for-the-automatic-diagnosis-of-optic-neuropathy/</loc>
     <lastmod>2020-06-05T00:00:00+00:00</lastmod>
@@ -94,6 +109,12 @@
   </url><url>
     <loc>www.caoz.top/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>www.caoz.top/terms/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url><url>
     <loc>www.caoz.top/admin/</loc>
   </url>

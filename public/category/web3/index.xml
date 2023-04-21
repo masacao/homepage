@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web3 | Z.Cao</title>
+    <link>www.caoz.top/category/web3/</link>
+      <atom:link href="www.caoz.top/category/web3/index.xml" rel="self" type="application/rss+xml" />
+    <description>Web3</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>浙ICP备2021027422号-1 Copyright@2023 Zheng Cao</copyright><lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/www.caoz.top/media/icon_hu11361c0288a87fbf93fc0f06f84edd26_64780_512x512_fill_lanczos_center_3.png</url>
+      <title>Web3</title>
+      <link>www.caoz.top/category/web3/</link>
+    </image>
+    
+    <item>
+      <title>A Simple PyTorch Implementation Benchmark</title>
+      <link>www.caoz.top/post/a-simple-pytorch-implementation-benchmark/</link>
+      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>www.caoz.top/post/a-simple-pytorch-implementation-benchmark/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Welcome to my latest blog post, where I will be introducing a basic benchmark for PyTorch, the popular deep learning library. As a machine learning enthusiast, I understand the importance of measuring the performance of different hardware setups for deep learning tasks. By comparing the capabilities of various CPUs and GPUs, we can better understand the trade-offs and make more informed decisions when building our machine learning infrastructure.&lt;/p&gt;
+&lt;p&gt;In this post, I will present the results of a basic PyTorch benchmark that I ran on various CPUs and GPUs. I will discuss the performance of these hardware components in terms of iterations per second (it/s), and provide some insights into the differences observed.&lt;/p&gt;
+&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from tqdm import tqdm
+import torch
+import os,sys
+
+# os.environ[&#39;CUDA_VISIBLE_DEVICES&#39;]=&#39;4&#39;
+
+# device=torch.device(&amp;quot;cuda:4&amp;quot; if torch.cuda.is_available() else &amp;quot;cpu&amp;quot;)
+# print(device)
+
+@torch.jit.script
+def foo():
+    x = torch.ones((1024 * 12, 1024 * 12), dtype=torch.float32)
+    y = torch.ones((1024 * 12, 1024 * 12), dtype=torch.float32)
+    x = x.cuda()
+    y = y.cuda()
+    z = x + y
+    return z
+
+
+if __name__ == &#39;__main__&#39;:
+    z0 = None
+    for _ in tqdm(range(10000000000)):
+        zz = foo()
+        if z0 is None:
+            z0 = zz
+        else:
+            z0 += zz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;The following are the results obtained from the benchmarking experiment:&lt;/p&gt;
+&lt;p&gt;(Updated 20/Apr)&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Hardware Component&lt;/th&gt;
+&lt;th&gt;Performance (it/s)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia 3090 GPU&lt;/td&gt;
+&lt;td&gt;670&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 3900X CPU&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Apple M1 CPU&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Server CPU&lt;/td&gt;
+&lt;td&gt;74&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Server GPU GTX1080Ti&lt;/td&gt;
+&lt;td&gt;300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Server GPU (Overheat)&lt;/td&gt;
+&lt;td&gt;55&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tencent Cloud&lt;/td&gt;
+&lt;td&gt;75&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;IIAIM Node GPU01 RTX3080&lt;/td&gt;
+&lt;td&gt;402&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tencent VENUS V100 GPU&lt;/td&gt;
+&lt;td&gt;677&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 5 5600G CPU&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia RTX3060 GPU&lt;/td&gt;
+&lt;td&gt;320&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;analysis&#34;&gt;Analysis&lt;/h2&gt;
+&lt;p&gt;From the results, we can observe that GPUs generally outperform CPUs in terms of performance when running PyTorch tasks. For instance, the Nvidia 3090 GPU achieved 670 it/s, which is 6.8% of its performance when running on a CPU. This is a remarkable improvement, and demonstrates the power of GPUs for deep learning tasks.&lt;/p&gt;
+&lt;p&gt;When comparing different CPUs, we can see that the Apple M1 and Server CPU show better performance than the AMD Ryzen 9 3900X and Ryzen 5 5600G. However, the difference in performance between these CPUs is not as significant as the difference between GPUs.&lt;/p&gt;
+&lt;p&gt;On the GPU side, the Nvidia RTX3090 and Tencent VENUS V100 show the highest performance, followed by the IIAIM Node GPU01 RTX3080 and Nvidia RTX3060. Interestingly, the Server GPU GTX1080Ti and the overheat variant show comparatively lower performance, suggesting that thermal management plays a crucial role in GPU performance.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In conclusion, this basic PyTorch benchmark highlights the advantages of using GPUs for deep learning tasks over CPUs. The performance gap between GPUs and CPUs is significant, and it is essential to choose the right hardware for your specific machine learning projects. It is also important to consider factors such as thermal management when selecting a GPU to ensure optimal performance.&lt;/p&gt;
+&lt;p&gt;As a final note, we hope to see further support for GPUs and neural engines in the near future, which could potentially unlock even greater performance gains for deep learning tasks.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

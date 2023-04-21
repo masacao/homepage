@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drug Discovery | Z.Cao</title>
+    <link>www.caoz.top/tag/drug-discovery/</link>
+      <atom:link href="www.caoz.top/tag/drug-discovery/index.xml" rel="self" type="application/rss+xml" />
+    <description>Drug Discovery</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>浙ICP备2021027422号-1 Copyright@2023 Zheng Cao</copyright><lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/www.caoz.top/media/icon_hu11361c0288a87fbf93fc0f06f84edd26_64780_512x512_fill_lanczos_center_3.png</url>
+      <title>Drug Discovery</title>
+      <link>www.caoz.top/tag/drug-discovery/</link>
+    </image>
+    
+    <item>
+      <title>Drug Discovery</title>
+      <link>www.caoz.top/project/drug-discovery/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>www.caoz.top/project/drug-discovery/</guid>
+      <description>&lt;p&gt;Docking, Retrosynthesis, etc.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

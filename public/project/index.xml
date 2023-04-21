@@ -5,19 +5,68 @@
     <link>www.caoz.top/project/</link>
       <atom:link href="www.caoz.top/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>浙ICP备2021027422号-1 Copyright@2022 Zheng Cao</copyright><lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>浙ICP备2021027422号-1 Copyright@2023 Zheng Cao</copyright><lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/www.caoz.top/media/icon_hu11361c0288a87fbf93fc0f06f84edd26_64780_512x512_fill_lanczos_center_2.png</url>
+      <url>/www.caoz.top/media/icon_hu11361c0288a87fbf93fc0f06f84edd26_64780_512x512_fill_lanczos_center_3.png</url>
       <title>Projects</title>
       <link>www.caoz.top/project/</link>
     </image>
     
     <item>
-      <title>Web3</title>
-      <link>www.caoz.top/project/letus-meme/</link>
+      <title>Lets MeMe</title>
+      <link>www.caoz.top/project/lets-meme/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>www.caoz.top/project/letus-meme/</guid>
-      <description>&lt;p&gt;Our mission is to re-direct the financial value of traffic, bringing more financial incentive around personal influence and allowing traffic to be circulated and utilized fully and efficiently.&lt;/p&gt;
+      <guid>www.caoz.top/project/lets-meme/</guid>
+      <description>&lt;h1 id=&#34;-introduction&#34;&gt;🏠 Introduction&lt;/h1&gt;
+&lt;figure&gt;&lt;img src=&#34;https://gitlab.com/letsmeme/whitepaper/-/raw/main/.gitbook/assets/%E6%88%AA%E5%B1%8F2022-11-17%2021.47.17.png&#34; alt=&#34;&#34;&gt;&lt;figcaption&gt;&lt;p&gt;https://t.xyz&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;We are a web3 traffic and community centric company that created Let&amp;rsquo;s meme &amp;ndash; a community management and traffic-fi protocol tool designed to help thousands of future businesses, communities and brands better market their blockchain-based technology and their web3 vision.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-letsmeme&#34;&gt;What is LetsMeMe?&lt;/h2&gt;
+&lt;p&gt;LetsMeMe is the world&amp;rsquo;s first trafficFi based community management platform. It is a social layer-2 network built upon traditional social media, i.e Twitter. LetsMeMe integrates web3 functionality with web2 social media platforms like Twitter and Youtube, to benefit and enhance crypto-native communities. Its existence will enable the creation of the largest web3 traffic network driven entirely by communities.&lt;/p&gt;
+&lt;h2 id=&#34;vision&#34;&gt;Vision&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Empower businesses of all sizes to reach beyond their target audience and achieve their marketing goals.&lt;/li&gt;
+&lt;li&gt;Create the farthest-reaching web3 traffic network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mission&#34;&gt;Mission&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow all communities to manage and engage their members more easily.&lt;/li&gt;
+&lt;li&gt;Destabilize the web2 traffic monopoly, allowing all organizations to advance their vision.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;values&#34;&gt;Values&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use advancing technology to drive marketing&lt;/li&gt;
+&lt;li&gt;Holders themselves are a community’s builders&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ERC-721G</title>
+      <link>www.caoz.top/project/erc-721g/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>www.caoz.top/project/erc-721g/</guid>
+      <description>&lt;h1 id=&#34;protect-your-nfts-with-tokenpatronus&#34;&gt;Protect Your NFTs with TokenPatronus&lt;/h1&gt;
+&lt;p&gt;Are you worried about the security of your non-fungible tokens (NFTs)? Look no further than TokenPatronus, the decentralized NFT anti-theft mechanism that provides strong property protection for NFT holders.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-tokenpatronus&#34;&gt;What is TokenPatronus?&lt;/h2&gt;
+&lt;p&gt;TokenPatronus is a decentralized anti-theft mechanism designed specifically for NFTs. It contains pre-event protection, in-event interruption, and post-event replevin enhancements for the complete NFT transaction process. Four modules make up the TokenPatronus anti-theft mechanism:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Decentralized access control (DAC)&lt;/li&gt;
+&lt;li&gt;Decentralized risk management (DRM)&lt;/li&gt;
+&lt;li&gt;Decentralized arbitration system (DAS)&lt;/li&gt;
+&lt;li&gt;ERC-721G standard smart contract&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These modules work together to ensure the trust and robustness of the TokenPatronus mechanism.&lt;/p&gt;
+&lt;h2 id=&#34;how-does-tokenpatronus-work&#34;&gt;How does TokenPatronus work?&lt;/h2&gt;
+&lt;p&gt;TokenPatronus divides the transaction of an NFT into three stages: pre-event protection, in-event interruption, and post-event process. Each stage has a corresponding role for TokenPatronus to play.&lt;/p&gt;
+&lt;p&gt;During pre-event protection, TokenPatronus uses its decentralized identification module to verify the identity of both parties involved in the transaction. This helps prevent fraudulent transactions from occurring in the first place.&lt;/p&gt;
+&lt;p&gt;In the event that a fraudulent transaction does occur, TokenPatronus can interrupt it using its decentralized risk management engine. This engine combines information from various sources, including deep learning models trained on transaction history stored in decentralized storage. The engine assesses the risk status of each transaction and can halt any suspicious activity.&lt;/p&gt;
+&lt;p&gt;Finally, if an NFT is stolen or lost after a successful transaction has taken place, TokenPatronus provides post-event replevin enhancements to help recover it. This includes the use of a decentralized arbitration system to resolve disputes and the ERC-721G smart contract standard to ensure that ownership of the NFT is properly recorded.&lt;/p&gt;
+&lt;h2 id=&#34;why-choose-tokenpatronus&#34;&gt;Why choose TokenPatronus?&lt;/h2&gt;
+&lt;p&gt;TokenPatronus provides several benefits over other anti-theft mechanisms on the market. First and foremost, it is decentralized, meaning that there is no central authority controlling the system. This makes it more resistant to attacks and less vulnerable to corruption.&lt;/p&gt;
+&lt;p&gt;Additionally, TokenPatronus is designed specifically for NFTs, meaning that it provides tailored protection for this unique asset class. It supports the general ERC-721 standard and will support more blockchains in the future, making it a versatile solution for NFT holders.&lt;/p&gt;
+&lt;p&gt;Finally, TokenPatronus is easy to use. It includes a front-end web interface that allows users to easily manage their NFTs and perform operations such as adding and unlocking them.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;re an NFT holder looking for strong property protection, look no further than TokenPatronus. Its decentralized anti-theft mechanism provides pre-event protection, in-event interruption, and post-event replevin enhancements to ensure the security of your NFTs. With its tailored support for ERC-721 standard NFTs and easy-to-use web interface, TokenPatronus is the perfect solution for anyone looking to protect their valuable digital assets.&lt;/p&gt;
 </description>
     </item>
     
@@ -33,7 +82,7 @@
     <item>
       <title>Medical Image Analysis</title>
       <link>www.caoz.top/project/medical-image-analysis/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
       <guid>www.caoz.top/project/medical-image-analysis/</guid>
       <description>&lt;p&gt;MedIA is a wide subject, including different image modalities, i.e. CT/MRI/X-ray.&lt;/p&gt;
 </description>

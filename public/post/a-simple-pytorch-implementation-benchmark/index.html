@@ -1,0 +1,1481 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Zheng Cao" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introduction Welcome to my latest blog post, where I will be introducing a basic benchmark for PyTorch, the popular deep learning library. As a machine learning enthusiast, I understand the importance of measuring the performance of different hardware setups for deep learning tasks." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="www.caoz.top/post/a-simple-pytorch-implementation-benchmark/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/www.caoz.top/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/www.caoz.top/css/wowchemy.18dd1b2d2475654c7c0c47d29f638859.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/www.caoz.top/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/www.caoz.top/media/icon_hu11361c0288a87fbf93fc0f06f84edd26_64780_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/www.caoz.top/media/icon_hu11361c0288a87fbf93fc0f06f84edd26_64780_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="www.caoz.top/post/a-simple-pytorch-implementation-benchmark/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@caozhengzju" />
+    <meta property="twitter:creator" content="@caozhengzju" />
+  
+  <meta property="og:site_name" content="Z.Cao" />
+  <meta property="og:url" content="www.caoz.top/post/a-simple-pytorch-implementation-benchmark/" />
+  <meta property="og:title" content="A Simple PyTorch Implementation Benchmark | Z.Cao" />
+  <meta property="og:description" content="Introduction Welcome to my latest blog post, where I will be introducing a basic benchmark for PyTorch, the popular deep learning library. As a machine learning enthusiast, I understand the importance of measuring the performance of different hardware setups for deep learning tasks." /><meta property="og:image" content="/www.caoz.top/post/a-simple-pytorch-implementation-benchmark/featured.jpg" />
+    <meta property="twitter:image" content="/www.caoz.top/post/a-simple-pytorch-implementation-benchmark/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2023-04-10T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2023-04-10T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "www.caoz.top/post/a-simple-pytorch-implementation-benchmark/"
+  },
+  "headline": "A Simple PyTorch Implementation Benchmark",
+  
+  "image": [
+    "/www.caoz.top/post/a-simple-pytorch-implementation-benchmark/featured.jpg"
+  ],
+  
+  "datePublished": "2023-04-10T00:00:00Z",
+  "dateModified": "2023-04-10T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Zheng Cao"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zhejiang University",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/www.caoz.top/media/icon_hu11361c0288a87fbf93fc0f06f84edd26_64780_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Introduction Welcome to my latest blog post, where I will be introducing a basic benchmark for PyTorch, the popular deep learning library. As a machine learning enthusiast, I understand the importance of measuring the performance of different hardware setups for deep learning tasks."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>A Simple PyTorch Implementation Benchmark | Z.Cao</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="c1be24d480ab797ff1693e1c47ff72b7" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/www.caoz.top/js/wowchemy-init.min.af22a52d9e52f6033270a248a3e651f7.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Z.Cao</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Z.Cao</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/www.caoz.top/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/www.caoz.top/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/www.caoz.top/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/www.caoz.top/#experience"><span>Experience</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/www.caoz.top/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/www.caoz.top/#skills"><span>Skills</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/www.caoz.top/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/www.caoz.top/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>A Simple PyTorch Implementation Benchmark</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">
+      Zheng Cao</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 10, 2023
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="www.caoz.top/category/deep-learning/">deep learning</a>, <a href="www.caoz.top/category/web3/">Web3</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header container-fluid featured-image-wrapper mt-4 mb-4" style="max-width: 1000px; max-height: 600px;">
+  <div style="position: relative">
+    <img src="/www.caoz.top/post/a-simple-pytorch-implementation-benchmark/featured.jpg" alt="" class="featured-image">
+    <span class="article-header-caption">Author By Z. Cao</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="introduction">Introduction</h2>
+<p>Welcome to my latest blog post, where I will be introducing a basic benchmark for PyTorch, the popular deep learning library. As a machine learning enthusiast, I understand the importance of measuring the performance of different hardware setups for deep learning tasks. By comparing the capabilities of various CPUs and GPUs, we can better understand the trade-offs and make more informed decisions when building our machine learning infrastructure.</p>
+<p>In this post, I will present the results of a basic PyTorch benchmark that I ran on various CPUs and GPUs. I will discuss the performance of these hardware components in terms of iterations per second (it/s), and provide some insights into the differences observed.</p>
+<h2 id="code">Code</h2>
+<pre><code class="language-python">from tqdm import tqdm
+import torch
+import os,sys
+
+# os.environ['CUDA_VISIBLE_DEVICES']='4'
+
+# device=torch.device(&quot;cuda:4&quot; if torch.cuda.is_available() else &quot;cpu&quot;)
+# print(device)
+
+@torch.jit.script
+def foo():
+    x = torch.ones((1024 * 12, 1024 * 12), dtype=torch.float32)
+    y = torch.ones((1024 * 12, 1024 * 12), dtype=torch.float32)
+    x = x.cuda()
+    y = y.cuda()
+    z = x + y
+    return z
+
+
+if __name__ == '__main__':
+    z0 = None
+    for _ in tqdm(range(10000000000)):
+        zz = foo()
+        if z0 is None:
+            z0 = zz
+        else:
+            z0 += zz
+</code></pre>
+<h2 id="results">Results</h2>
+<p>The following are the results obtained from the benchmarking experiment:</p>
+<p>(Updated 20/Apr)</p>
+<table>
+<thead>
+<tr>
+<th>Hardware Component</th>
+<th>Performance (it/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nvidia 3090 GPU</td>
+<td>670</td>
+</tr>
+<tr>
+<td>AMD Ryzen 9 3900X CPU</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Apple M1 CPU</td>
+<td>48</td>
+</tr>
+<tr>
+<td>Server CPU</td>
+<td>74</td>
+</tr>
+<tr>
+<td>Server GPU GTX1080Ti</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Server GPU (Overheat)</td>
+<td>55</td>
+</tr>
+<tr>
+<td>Tencent Cloud</td>
+<td>75</td>
+</tr>
+<tr>
+<td>IIAIM Node GPU01 RTX3080</td>
+<td>402</td>
+</tr>
+<tr>
+<td>Tencent VENUS V100 GPU</td>
+<td>677</td>
+</tr>
+<tr>
+<td>AMD Ryzen 5 5600G CPU</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Nvidia RTX3060 GPU</td>
+<td>320</td>
+</tr>
+</tbody>
+</table>
+<h2 id="analysis">Analysis</h2>
+<p>From the results, we can observe that GPUs generally outperform CPUs in terms of performance when running PyTorch tasks. For instance, the Nvidia 3090 GPU achieved 670 it/s, which is 6.8% of its performance when running on a CPU. This is a remarkable improvement, and demonstrates the power of GPUs for deep learning tasks.</p>
+<p>When comparing different CPUs, we can see that the Apple M1 and Server CPU show better performance than the AMD Ryzen 9 3900X and Ryzen 5 5600G. However, the difference in performance between these CPUs is not as significant as the difference between GPUs.</p>
+<p>On the GPU side, the Nvidia RTX3090 and Tencent VENUS V100 show the highest performance, followed by the IIAIM Node GPU01 RTX3080 and Nvidia RTX3060. Interestingly, the Server GPU GTX1080Ti and the overheat variant show comparatively lower performance, suggesting that thermal management plays a crucial role in GPU performance.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, this basic PyTorch benchmark highlights the advantages of using GPUs for deep learning tasks over CPUs. The performance gap between GPUs and CPUs is significant, and it is essential to choose the right hardware for your specific machine learning projects. It is also important to consider factors such as thermal management when selecting a GPU to ensure optimal performance.</p>
+<p>As a final note, we hope to see further support for GPUs and neural engines in the near future, which could potentially unlock even greater performance gains for deep learning tasks.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="www.caoz.top/tag/deep-learning/">deep learning</a>
+  
+  <a class="badge badge-light" href="www.caoz.top/tag/web3/">Web3</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=www.caoz.top/post/a-simple-pytorch-implementation-benchmark/&amp;text=A%20Simple%20PyTorch%20Implementation%20Benchmark" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=www.caoz.top/post/a-simple-pytorch-implementation-benchmark/&amp;t=A%20Simple%20PyTorch%20Implementation%20Benchmark" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=A%20Simple%20PyTorch%20Implementation%20Benchmark&amp;body=www.caoz.top/post/a-simple-pytorch-implementation-benchmark/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=www.caoz.top/post/a-simple-pytorch-implementation-benchmark/&amp;title=A%20Simple%20PyTorch%20Implementation%20Benchmark" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=A%20Simple%20PyTorch%20Implementation%20Benchmark%20www.caoz.top/post/a-simple-pytorch-implementation-benchmark/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=www.caoz.top/post/a-simple-pytorch-implementation-benchmark/&amp;title=A%20Simple%20PyTorch%20Implementation%20Benchmark" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="www.caoz.top"><img class="avatar mr-3 avatar-circle" src="/www.caoz.top/authors/admin/avatar_hu11dccbb851f6c033b62b7ccdc6c8a6b9_1108456_270x270_fill_q75_lanczos_center.jpg" alt="Zheng Cao"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="www.caoz.top">Zheng Cao</a></h5>
+      <h6 class="card-subtitle">Ph.D. Candidate</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:z.cao@zju.edu.cn" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/drmaasaa" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=lBrfv0EAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/masacao" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/%e6%94%bf-%e6%9b%b9-2367a9147/?locale=en_US" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="www.caoz.top/post/training-2d-nnunet-with-personal-dataset/">Training 2D nnUNet with personal dataset</a></li>
+      
+      <li><a href="www.caoz.top/project/lets-meme/">Lets MeMe</a></li>
+      
+      <li><a href="www.caoz.top/project/erc-721g/">ERC-721G</a></li>
+      
+      <li><a href="www.caoz.top/project/drug-discovery/">Drug Discovery</a></li>
+      
+      <li><a href="www.caoz.top/project/medical-image-analysis/">Medical Image Analysis</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+<p class="powered-by">
+    浙ICP备2021027422号-1 Copyright@2022 Zheng Cao
+  </p>
+  
+</footer>
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/www.caoz.top/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/www.caoz.top/en/js/wowchemy.min.5f55938f9a3bd4cdddcfa5326777a1bc.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
