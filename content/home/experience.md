@@ -26,11 +26,10 @@ experience:
   - title: CTO / Co-founder
     company: TraFinity Limited
     company_url: 'https://letusmeme.com'
-    location: Shenzhen
+    location: Hongkong
     date_start: '2022-09-01'
     date_end: ''
     description: Product Devlopment.
-
 
   - title: Theory Group Intern
     company: Quantum Lab, Tencent Co., Ltd.
@@ -53,7 +52,7 @@ experience:
     company_url: 'http://www.xuanlife.com.cn'
     location: Nanjing
     date_start: '2020-10-01'
-    date_end: ''
+    date_end: '2021-9-30'
     description: Research on large-scale machine learning algorithms and parallel implementation.
         
   - title: Technical Support Intern
@@ -64,9 +63,9 @@ experience:
     date_end: '2018-08-01'
     description: Technical Support for Sales Team.
 
-  - title: CTO / Co-founder
+  - title: CTO
     company: Nanjing Kaitianyan UAV Tech Co., Ltd
-    company_url: ''
+    company_url: 'www.ktyuav.com'
     location: Nanjing
     date_start: '2017-01-01'
     date_end: '2018-06-30'
