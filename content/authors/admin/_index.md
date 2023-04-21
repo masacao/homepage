@@ -15,7 +15,8 @@ organizations:
 
 # Short bio (displayed in user profile at end of posts)
 # bio: Stay hungry, Stay foolish.
-bio: Masa
+# bio: There are decades where nothing happens; and there are weeks where decades happen.
+bio: 
 
 # Interests to show in About widget
 interests:
@@ -26,15 +27,18 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: Doctor of Philosophy in Computer Science
+  - course: Computer Science (Ph.D.)
     institution: Zhejiang University (ZJU)
-    year: 2019
-  - course: Bachelor of Science (honors) in Applied Chemistry
+    year: 2024
+  - course: MBA (Minor)
+    institution: BEST Project - Zhejiang University (ZJU)
+    year: 2023
+  - course: Applied Chemistry (B.Sc. hons.)
     institution: University of Reading (UoR)
-    year: 2018
-  - course: Bachelor of Science in Applied Chemistry
+    year: 2019
+  - course: Applied Chemistry (B.Sc.)
     institution: Nanjing University of Information Science & Technology (NUIST)
-    year: 2015
+    year: 2019
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -70,7 +74,7 @@ email: "z.cao AT zju.edu.cn"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Zheng Cao (曹政) is a Ph.D. candidate, majoring in computer science, Zhejiang University, under the supervision from Prof. Jian Wu. He is member of ZJU RealDoctor AI Research Centre and ZJU Innovative Drug Discovery Insitute. His research interests include AI for medical image analysis, AI for drug discovery and Blockchain Technology. He serves as a CTO / Co-founder for a web3 startup **TraFinity Ltd.** as well.
+Zheng Cao (曹政) is a Ph.D. candidate, majoring in computer science, Zhejiang University, under the supervision from Prof. Jian Wu. He is member of ZJU RealDoctor AI Research Centre and ZJU Innovative Drug Discovery Insitute. His research interests include AI for medical image analysis, AI for drug discovery and Blockchain Technology. He serves as a CTO / Co-founder for a web3 startup **TraFinity ltd.** as well.
 <!-- {{< icon name="eye" pack="fas" >}}Here is my full [publications list](./publication/). -->
 
 <!-- {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}. -->
