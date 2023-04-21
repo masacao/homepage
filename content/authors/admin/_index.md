@@ -75,8 +75,10 @@ email: "z.cao AT zju.edu.cn"
 highlight_name: true
 ---
 Zheng Cao (曹政) is a Ph.D. candidate, majoring in computer science, Zhejiang University, under the supervision from Prof. Jian Wu. He is member of ZJU RealDoctor AI Research Centre and ZJU Innovative Drug Discovery Insitute. His research interests include AI for medical image analysis, AI for drug discovery and Blockchain Technology. He serves as a CTO / Co-founder for a web3 startup **TraFinity ltd.** as well. 
+
 {{< icon name="eye" pack="fas" >}}Here is my full [publications list](./publication/).
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/2022cv_en" "newtab" >}}resume{{< /staticref >}}.
+
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/2022cv_en" "newtab" >}}resume{{< /staticref >}}.
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q0V5Y3KXJ"></script>
