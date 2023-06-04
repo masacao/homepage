@@ -12,6 +12,8 @@ role: Ph.D. Candidate
 organizations:
 - name: Zhejiang University
   url: http://zju.edu.cn
+- name: TraFinity Labs
+  url: https://t.xyz
 
 # Short bio (displayed in user profile at end of posts)
 # bio: Stay hungry, Stay foolish.
@@ -27,16 +29,16 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: Computer Science (Ph.D.)
+  - course: Computer Science and Technology | Ph.D.
     institution: Zhejiang University (ZJU)
     year: 2024
-  - course: MBA (Minor)
-    institution: BEST Project - Zhejiang University (ZJU)
+  - course: Business Administration | MBA (Minor)
+    institution: BEST Project, Zhejiang University (ZJU)
     year: 2023
-  - course: Applied Chemistry (B.Sc. hons.)
+  - course: Applied Chemistry | B.Sc. (Hons)
     institution: University of Reading (UoR)
     year: 2019
-  - course: Applied Chemistry (B.Sc.)
+  - course: Applied Chemistry | B.Sc.
     institution: Nanjing University of Information Science & Technology (NUIST)
     year: 2019
 
@@ -64,9 +66,9 @@ social:
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 
 # and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: media/resume.pdf
+- icon: cv
+  icon_pack: ai
+  link: uploads/2022cv_en.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "z.cao AT zju.edu.cn"
