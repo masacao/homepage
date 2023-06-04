@@ -26,17 +26,18 @@ item:
 
 - certificate_url: ""
   date_start: "2022-06-12"
+  date_end: "2023-10-30"
   description: ""
-  organization: Second Prize (Wanxiang Blockchain Labs)
+  organization: First Place Winner (Zero2Hero BNB Chain Hackathon, 2023), Second Place (Foresight X OpenBuild HongKong 2023), Second Place (Wanxiang Blockchain Labs, 2022)
   organization_url: ""
   title: Web3 (Blockchain) Hackathon
 - certificate_url: ""
   date_end: "2024-10-30"
   date_start: "2015-06-01"
   description: ""
-  organization: Academic Scholarship (2019-2024), The First Prize Scholarship (2022), Merit Graduate Student (2022), Outstanding Graduates (2019-2021), Extrodinary Bachlors (2019), RED Award (2019), Five-Four Youth Pacesetters (2018), Merit Undergraduate Students (2017)
+  organization: Academic Scholarship (2019-2024), Outstanding Communist Youth League Leader (2023), The First Prize Scholarship (2022), Merit Graduate Student (2022), Outstanding Graduates (2019/2020/2021), Extrodinary Bachlors (2019), RED Award (2019), Five-Four Youth Pacesetters (2018), Merit Undergraduate Students (2017)
   organization_url: ""
-  title: University Awards
+  title: University Awards & Scholarships
 - certificate_url: "https://www.comap-math.com/mcm/2018Certs/73473.pdf"
   date_end: "2018-03-01"
   date_start: "2017-03-01"
