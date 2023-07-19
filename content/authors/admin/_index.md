@@ -11,14 +11,14 @@ role: Ph.D. Candidate
 # Organizations/Affiliations to show in About widget
 organizations:
 - name: Zhejiang University
-  url: http://zju.edu.cn
+  url: http://www.zju.edu.cn
 - name: TraFinity Labs
-  url: https://t.xyz
+  url: https://dev.termix.ai
 
 # Short bio (displayed in user profile at end of posts)
 # bio: Stay hungry, Stay foolish.
 # bio: There are decades where nothing happens; and there are weeks where decades happen.
-bio: 
+bio: Inspiring Change in the Realm of AI & Blockchain.
 
 # Interests to show in About widget
 interests:
@@ -33,7 +33,7 @@ education:
     institution: Zhejiang University (ZJU)
     year: 2024
   - course: Business Administration | MBA (Minor)
-    institution: BEST Project, Zhejiang University (ZJU)
+    institution: BEST Project, Zhejiang University School of Managment (ZJU-SoM)
     year: 2023
   - course: Applied Chemistry | B.Sc. (Hons)
     institution: University of Reading (UoR)
@@ -66,9 +66,9 @@ social:
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 
 # and uncomment the lines below.
-- icon: cv
-  icon_pack: ai
-  link: uploads/2022cv_en.pdf
+#- icon: cv
+#  icon_pack: ai
+#  link: uploads/2022cv_en.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "z.cao AT zju.edu.cn"
@@ -76,11 +76,12 @@ email: "z.cao AT zju.edu.cn"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Zheng Cao (曹政) is a Ph.D. candidate, majoring in computer science, Zhejiang University, under the supervision from Prof. Jian Wu. He is member of ZJU RealDoctor AI Research Centre and ZJU Innovative Drug Discovery Insitute. His research interests include AI for medical image analysis, AI for drug discovery and Blockchain Technology. He serves as a CTO / Co-founder for a web3 startup **TraFinity ltd.** as well. 
+Zheng Cao (曹政) is a Ph.D. candidate, specializing in computer science under the guidance of Prof. Jian Wu. He is member of ZJU RealDoctor AI Research Center. He ambitiously explores the possibilities of artificial intelligence in medical image analysis and drug discovery. {{< icon name="eye" pack="fas" >}}See his full [list of publications](./publication/).
 
-{{< icon name="eye" pack="fas" >}}Here is my full [publications list](./publication/).
+In addition to his academic pursuits, Zheng leverages his comprehensive expertise in blockchain technology as the cofounder of the cutting-edge web3 startup, TraFinity Ltd. His work primarily focuses on creating novel intersections between AI and blockchain technologies in the rapidly evolving metaverse and cybersecurity sectors.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/2022cv_en.pdf" "newtab" >}}resume{{< /staticref >}}.
+
+<!-- {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/2022cv_en.pdf" "newtab" >}}resume{{< /staticref >}}. -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q0V5Y3KXJ"></script>

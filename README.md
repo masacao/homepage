@@ -2,6 +2,6 @@
 
 Based on Academic Template for [Hugo](https://github.com/gohugoio/hugo)
 
-Powered by[**Wowchemy**](https://wowchemy.com).
+Powered by [**Wowchemy**](https://wowchemy.com).
 
-MySite: [**www.caoz.top**](https://www.caoz.top).
+Visit my homepage: [**www.caoz.top**](https://www.caoz.top).

@@ -35,7 +35,7 @@ item:
   date_end: "2024-10-30"
   date_start: "2015-06-01"
   description: ""
-  organization: Academic Scholarship (2019-2024), Outstanding Communist Youth League Leader (2023), The First Prize Scholarship (2022), Merit Graduate Student (2022), Outstanding Graduates (2019/2020/2021), Extrodinary Bachlors (2019), RED Award (2019), Five-Four Youth Pacesetters (2018), Merit Undergraduate Students (2017)
+  organization: Academic Scholarship (2019-2023), Outstanding Communist Youth League Leader (2023), First Prize Scholarship (2022), Merit Graduate Student (2022), Outstanding Graduates (2019/2020/2021), Extrodinary Bachelor (2019), RED Award (2019), BMI Award (2019), Five-Four Youth Pacesetters (2018), Merit Undergraduate Students (2017)
   organization_url: ""
   title: University Awards & Scholarships
 - certificate_url: "https://www.comap-math.com/mcm/2018Certs/73473.pdf"
