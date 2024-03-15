@@ -12,8 +12,8 @@ role: Ph.D. Candidate
 organizations:
 - name: Zhejiang University
   url: http://www.zju.edu.cn
-- name: TraFinity Labs
-  url: https://dev.termix.ai
+- name: GoPlus Labs Open Research
+  url: https://gopluslabs.io
 
 # Short bio (displayed in user profile at end of posts)
 # bio: Stay hungry, Stay foolish.
@@ -61,7 +61,7 @@ social:
   link: https://github.com/masacao
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/政-曹-2367a9147/?locale=en_US
+  link: https://www.linkedin.com/in/masacao
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 
