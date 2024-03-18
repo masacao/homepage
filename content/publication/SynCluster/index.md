@@ -1,5 +1,5 @@
 ---
-title: "Full Scale Attention for Automated COVID-19 Diagnosis from CT Images"
+title: "SynCluster: Reaction Type Clustering and Recommendation Framework for Synthesis Planning"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
@@ -29,7 +29,7 @@ publishDate: "2023-11-17T00:00:00Z"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["1"]
+publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: JACS Au

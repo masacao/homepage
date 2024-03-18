@@ -29,10 +29,12 @@ content:
     tag: '*'
   - name: Web3
     tag: Web3
+  - name: Medical Image Analysis
+    tag: Medical Image Analysis
+  - name: AI4Science
+    tag: AI4Science
   - name: Deep Learning
     tag: Deep Learning
-  - name: Drug Discovery
-    tag: Drug Discovery
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.

@@ -2,8 +2,7 @@
 title: Drug Discovery
 summary: Project like Retrosynthesis, Docking, Affinity Prediction.
 tags:
-- Deep Learning
-- Drug Discovery
+- AI4Science
 date: "2021-07-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
