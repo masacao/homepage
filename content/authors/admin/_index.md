@@ -10,10 +10,8 @@ role: Ph.D. Candidate
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: Zhejiang University
-  url: http://www.zju.edu.cn
-- name: GoPlus Labs Open Research
-  url: https://gopluslabs.io
+- name: NUIST
+  url: https://faculty.nuist.edu.cn/caozheng/zh_CN/index.htm
 
 # Short bio (displayed in user profile at end of posts)
 # bio: Stay hungry, Stay foolish.
@@ -76,10 +74,7 @@ email: "z.cao AT zju.edu.cn"
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Zheng Cao (曹政) is a Ph.D. candidate, specializing in computer science under the guidance of Prof. Jian Wu. He is member of ZJU RealDoctor AI Research Center. He ambitiously explores the possibilities of artificial intelligence in medical image analysis and drug discovery. {{< icon name="eye" pack="fas" >}}See his full [list of publications](./publication/).
-
-In addition to his academic pursuits, Zheng leverages his comprehensive expertise in blockchain technology as the cofounder of the cutting-edge web3 startup, TraFinity Ltd. His work primarily focuses on creating novel intersections between AI and blockchain technologies in the rapidly evolving metaverse and cybersecurity sectors.
-
+Dr. Zheng Cao (曹政) is a lecturer at School of Future Technology, NUSIT. He completed his Ph.D. in computer science at Zhejiang University. {{< icon name="eye" pack="fas" >}}See his full [list of publications](./publication/).
 
 <!-- {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/2022cv_en.pdf" "newtab" >}}resume{{< /staticref >}}. -->
 
